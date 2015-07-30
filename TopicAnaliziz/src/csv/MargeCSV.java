@@ -25,11 +25,11 @@ public class MargeCSV {
 		programMap.get(key).printData();
 	}
 
-	public String formingData(Integer[] qNo){
+	public String formingEnqueteData(Integer[] qNo){
 		StringBuilder data = new StringBuilder();
 		for(Integer q : qNo){
 			//data.append("Question No:"+q+"\n");
-
+			data.append("key:"+q+"\n");
 			for(String id : map.keySet()){
 				if(map.get(id).questions[q].length() > 0){
 					data.append(map.get(id).questions[q]);
